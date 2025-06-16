@@ -1,0 +1,25 @@
+.item {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &__title {
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 26px;
+        text-align: center;
+        line-height: 108%;
+        color: var(--osnov);
+        padding-top: 10px;
+    }
+
+    &__text {
+        font-family: var(--third-family);
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 117%;
+        text-align: center;
+    }
+}

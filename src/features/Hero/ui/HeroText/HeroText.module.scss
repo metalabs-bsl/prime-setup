@@ -1,0 +1,43 @@
+.heroLeft__text {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    gap: 20px;
+    padding-bottom: 30px;
+
+    h1 {
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 55px;
+        line-height: 122%;
+        color: #fff;
+    }
+
+    p {
+        font-family: var(--third-family);
+        font-weight: 400;
+        font-size: 26px;
+        color: #fff;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .heroLeft__text {
+        width: 100%;
+        min-height: 115px;
+        gap: 8px;
+    
+        h1 {
+            font-size: 26px;
+            line-height: 108%;
+        }
+    
+        p {
+            font-size: 14px;
+        }
+    }
+}

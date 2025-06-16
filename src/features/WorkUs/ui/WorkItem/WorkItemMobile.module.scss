@@ -1,0 +1,28 @@
+@media (max-width: 500px) {
+    .item {
+        max-width: 313px;
+        gap: 8px;
+
+        &__img {
+            width: 70px;
+            height: 70px;
+        }
+    
+        &__title {
+            font-size: 20px;
+            line-height: 110%;
+            padding-top: 8px;
+        }
+    
+        &__text {
+            font-size: 17px;
+            line-height: 112%;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .item {
+        max-width: 260px;
+    }
+} 

@@ -1,0 +1,174 @@
+.contactUs {
+    max-width: 374px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    .contactUs__up {
+        .contactUs__text {
+           display: none;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 37.5px;
+
+        .contactUs__items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .item1,
+            .item2,
+            .item3 {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                color: #fff;
+
+                .item1__title,
+                .item2__title,
+                .item3__title {
+                    font-family: var(--second-family);
+                    font-weight: 400;
+                    font-size: 26px;
+                    line-height: 135%;
+                }
+
+                .items1__text,
+                .items2__text,
+                .items3__text {
+                    font-family: var(--third-family);
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 108%;
+                }
+
+                .item3__call {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 18px;
+                    padding-left: 70px;
+
+                    .item3__call__link1,
+                    .item3__call__link2 {
+                        font-family: var(--third-family);
+                        font-weight: 400;
+                        font-size: 24px;
+                        color: #fff;
+                        position: relative;
+                        cursor: pointer;
+                    }
+
+                    .item3__call__link1::after {
+                        content: '';
+                        position: absolute;
+                        background-image: url('/assets/icons/FooterEmail.svg');
+                        background-repeat: no-repeat;
+                        width: 40px;
+                        height: 40px;
+                        top: -3px;
+                        left: -60px;
+                    }
+
+                    .item3__call__link2::after {
+                        content: '';
+                        position: absolute;
+                        background-image: url('/assets/icons/FooterPhone.svg');
+                        background-repeat: no-repeat;
+                        width: 40px;
+                        height: 40px;
+                        top: -3px;
+                        left: -60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .contactUs {
+        gap: 30px;
+
+        .contactUs__up {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            .contactUs__logo {
+                width: 202px;
+                height: 82px;
+            }
+            
+            .contactUs__text {
+                display: block;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 129%;
+                text-align: center;
+                color: #fff;
+            }
+        }
+    
+        &__box {
+            gap: 20px;
+    
+            .contactUs__items {
+                gap: 20px;
+    
+                .item1,
+                .item2,
+                .item3 {
+                    gap: 8px;
+    
+                    .item1__title,
+                    .item2__title,
+                    .item3__title {
+                        font-size: 20px;
+                        line-height: 100%;
+                    }
+    
+                    .items1__text,
+                    .items2__text,
+                    .items3__text {
+                        font-size: 14px;
+                        line-height: 129%;
+                    }
+    
+                    .item3__call {
+                        gap: 16px;
+                        padding-left: 38px;
+                        padding-top: 14px;
+    
+                        .item3__call__link1,
+                        .item3__call__link2 {
+                            font-size: 14px;
+                        }
+    
+                        .item3__call__link1::after {
+                            background-image: url('/assets/icons/FooterEmailMobile.svg');
+                            width: 22px;
+                            height: 21px;
+                            top: -3px;
+                            left: -36px;
+                        }
+    
+                        .item3__call__link2::after {
+                            background-image: url('/assets/icons/FooterPhoneMobile.svg');
+                            width: 21px;
+                            height: 21px;
+                            top: -3px;
+                            left: -36px;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}    

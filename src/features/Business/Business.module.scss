@@ -1,0 +1,41 @@
+.business {
+    padding: 75px 0;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+
+        .business__up {
+            max-width: 774px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .business__title {
+                font-family: var(--second-family);
+                font-size: 46px;
+                line-height: 109%;
+                text-align: center;
+                color: var(--zagol);
+            }
+
+            .business__text {
+                font-family: var(--third-family);
+                font-size: 24px;
+                line-height: 108%;
+                text-align: center;
+                color: #000;
+            }
+        }
+
+        .business__items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+    }
+}

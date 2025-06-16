@@ -1,0 +1,154 @@
+{
+  "Header": {
+    "btn2": "Leave a request"
+  },
+
+  "Hero": {
+    "h1": "Setup Your Business in the UAE — Quickly, Confidently, and Compliantly",
+    "p": "Launch your company in the UAE without the stress. PrimeSetup helps entrepreneurs, investors, and professionals register their business seamlessly, from choosing the right legal structure to securing their trade licence.",
+    "telegram": "Write in chat",
+    "whatsapp": "Write to WhatsApp",
+    "li1First": "1000+",
+    "li1Second": "satisfied clients",
+    "li2First": "5+ years",
+    "li2Second": "of industry experience",
+    "li3Second": "Transparent, contract-based service",
+    "LiCheck1": "No hidden costs",
+    "LiCheck2": "Expert guidance, step-by-step",
+    "LiCheck3": "Tailored setup across Free Zone, Mainland, or Offshore",
+    "formDescription": "Request a Free Consultation"
+  },
+
+  "FormHero": {
+    "name": "Name",
+    "email": "E-mail address",
+    "number": "Phone number",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending..."
+  },
+
+  "FormFooter": {
+    "name": "Name",
+    "email": "E-mail address",
+    "number": "Phone number",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending..."
+  },
+
+  "ContactUs":{
+    "officeAddressMobileUP": "Comprehensive solutions for registering and supporting businesses in the UAE.",
+    "officeAddress": "Office Address:",
+    "officeAddressText1": "Prime Setup Business Sheikh Zayed Road, Dubai, UAE",
+
+    "workingHours": "Working Hours:",
+    "workingHoursText1": "Monday to Friday — 8:30 AM to 5:30 PM Saturday — 10:00 AM to 2:00 PM",
+
+    "contactUs": "Contact Us",
+
+    "formDescription": "Ready to Start a Business in the UAE?",
+    "footerProtection": "2025 PRIME SETUP. All rights reserved"
+  },
+
+  "WorkUs": {
+    "h2Work": "Why is it worth working with us?",
+    "btnCorner": "Book a Consultation",
+    "title1": "Over 15 Years of Experience",
+    "title2": "Comprehensive Solutions",
+    "title3": "Personalised Service",
+    "title4": "Fast Registration",
+    "title5": "24/7 Support",
+    "title6": "Trusted Network",
+    "text1": "Guiding businesses into the UAE market since 2009 with proven expertise.",
+    "text2": "All services under one roof, from company setup to ongoing support.",
+    "text3": "Advice and solutions tailored to your unique business needs.",
+    "text4": "Start your business in as little as 48 hours.",
+    "text5": "Round-the-clock assistance whenever you need it.",
+    "text6": "Strong partnerships with banks and government agencies for a smooth setup."
+  },
+
+  "Business": {
+    "h2Business": "Начните бизнес в ОАЭ с профессиональной поддержкой",
+    "pBusiness": "Простые и понятные пакеты для быстрого старта. Выбирайте и регистрируйтесь без лишней бюрократии.",
+    "title1Business": "Dubai Freezone",
+    "title2Business": "RAKEZ Free Zone",
+    "title3Business": "Dubai Mainland",
+    "price1Business": "Starting at AED 12,010",
+    "price2Business": "Starting at AED 12,500",
+    "price3Business": "Starting at AED 14,999",
+
+    "check1Business1": "Upgrade to 1 visa for only AED 14,900",
+    "check1Business2": "Guaranteed renewal rate for 3 years",
+    "check1Business3": "Up to 30% discount on multi-year licences",
+    "check1Business4": "Lease agreement included for banking",
+    "check1Business5": "3 business activities included",
+    "check1Business6": "Dubai address with PO Box & mail management",
+    "check1Business7": "Bank account setup assistance",
+
+    "check2Business1": "Trade Licence + MOA",
+    "check2Business2": "Multiple business activities",
+    "check2Business3": "2-year UAE residence visa",
+    "check2Business4": "Emirates ID & biometric registration",
+    "check2Business5": "Flexi desk + shared P.O. Box",
+    "check2Business6": "E-channel registration",
+    "check2Business7": "FREE digital bank account opening",
+    "check2Business8": "Most cost-effective free zone in the UAE",
+    
+    "check3Business1": "100% foreign ownership",
+    "check3Business2": "No local sponsorship required",
+    "check3Business3": "No paid-up share capital",
+    "check3Business4": "Access to 1000+ professional activities",
+    "check3Business5": "2-year multiple-entry residency visa",
+    "check3Business6": "Flexi-desk + legal address included"
+  },
+
+  "BusinessCard": {
+    "btnBusinessCard": "Start Now"
+  },
+
+  "Way": {
+    "h2Way": "A Simple Path to Business Registration",
+    "pWay": "We make launching your UAE company smooth, swift, and fully compliant — here’s how:",
+    "text1Way": "Discovery Call — We begin with a personalised consultation to understand your business goals and recommend the ideal setup.",
+    "text2Way": "Strategic Planning — Based on your needs, we advise whether Mainland, Free Zone, or Offshore is best — and map the full licensing path.",
+    "text3Way": "Documentation & Compliance — Our experts prepare and verify all documents to ensure error-free submission and fast approval.",
+    "text4Way": "Full Registration — We handle all government submissions, follow-ups, and formalities — so you don’t have to lift a finger.",
+    "text5Way": "Business Launch — From bank account setup to visa processing, we get your operations ready — with continued support even after launch."
+  },
+
+  "Questions": {
+    "h2Questions": "Frequently Asked Questions",
+    "question1": "Why should I start a business in Dubai?",
+    "question2": "How do I set up a business in Dubai?",
+    "question3": "What types of business licences are available in Dubai?",
+    "question4": "What are the main steps to set up a company in Dubai?",
+    "question5": "How much does it cost to set up a business in Dubai?",
+    "question6": "Can foreigners own 100% of their business in Dubai?",
+    "question7": "What’s the difference between mainland and free zone setups?",
+    "question8": "What business activities are allowed in Dubai?",
+    "question9": "How long does it take to set up a company in Dubai?",
+    "question10": "What documents are required for business setup?",
+    "answer1": "Dubai offers a strategic location, world-class infrastructure, and a business-friendly environment, making it ideal for entrepreneurs and investors.",
+    "answer2": "You’ll need to select your business activity, choose a jurisdiction, handle documentation, apply for a licence, and open a bank account, we guide you through every step.",
+    "answer3": "Dubai issues commercial, professional, and industrial licences, each tailored to specific business activities.",
+    "answer4": "The process includes consultation, documentation, a licence application, visa processing, and bank account opening for a smooth start.",
+    "answer5": "Costs vary depending on the business type and location, but we provide transparent quotes tailored to your requirements.",
+    "answer6": "Yes, full foreign ownership is allowed in many free zones and several mainland sectors, depending on the activity.",
+    "answer7": "Mainland companies can trade across the UAE, while free zone businesses benefit from tax advantages and 100% foreign ownership but have some trade restrictions.",
+    "answer8": "Dubai supports thousands of activities across sectors like retail, technology, hospitality, and consultancy. ask us for the best fit for your goals.",
+    "answer9": "With our expertise, company setup can be completed in as little as a few days, depending on the business structure and approvals.",
+    "answer10": "Typically, you’ll need passport copies, proof of address, a business plan, and completed application forms- we’ll provide a tailored checklist for your case."
+  },
+
+  "Review": {
+    "h2Review": "What Our Clients Say About Us",
+    "pReview": "Reviews from those who have already launched a business in the UAE with our help. Their experience is the best proof of the quality of our work.",
+    "titleReview1": "Anna Petrova, Moscow",
+    "titleReview2": "Anna Petrova, Moscow",
+    "titleReview3": "Anna Petrova, Moscow",
+    "textReview1": "«I had been looking for a company that could help me start a business in the UAE without stress — and I found it! I was guided through every step, all my questions were answered, and I got help with document preparation and registration. Within 5 days, I already had my license. Honestly — this is the best investment I’ve made in my business!»",
+    "textReview2": "«I had been looking for a company that could help me start a business in the UAE without stress — and I found it! I was guided through every step, all my questions were answered, and I got help with document preparation and registration. Within 5 days, I already had my license. Honestly — this is the best investment I’ve made in my business!»",
+    "textReview3": "«I had been looking for a company that could help me start a business in the UAE without stress — and I found it! I was guided through every step, all my questions were answered, and I got help with document preparation and registration. Within 5 days, I already had my license. Honestly — this is the best investment I’ve made in my business!»"
+  }
+}

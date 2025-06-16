@@ -1,0 +1,24 @@
+.questions {
+    padding: 75px 0;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+
+        .questions__title {
+            font-family: var(--second-family);
+            text-align: center;
+            font-size: 46px;
+            line-height: 109%;
+            color: var(--zagol);
+        }
+
+        .questions__items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

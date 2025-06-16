@@ -1,0 +1,47 @@
+.header {
+    background: transparent;
+    padding-top: 30px;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header__nav {
+            width: 605px;
+
+            .header__ul {
+               display: flex;
+               justify-content: space-between;
+
+                .header__ul__li {
+                   font-weight: 700;
+                   font-size: 18px;
+                   cursor: pointer;
+                }
+            }
+        }
+
+        .header__right {
+            display: flex;
+            align-items: center;
+            column-gap: 54px;
+
+            .header__btn{
+                display: flex;
+                gap: 10px;
+            }
+
+            .header__burger {
+                display: none;
+            }
+        }
+    }
+}

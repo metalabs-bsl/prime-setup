@@ -1,0 +1,73 @@
+.way {
+    padding: 75px 0;
+    position: relative;
+    width: 100%;
+
+    .way__line1 {
+        position: absolute;
+        top: 43%;
+        width: 100vw;
+        height: auto;
+        max-width: 100%;
+        display: block;
+    }
+
+    .way__line2 {
+        position: absolute;
+        top: 73%;
+        width: 100vw;
+        height: auto;
+        max-width: 100%;
+        display: block;
+    }
+
+    .way__line3 {
+        display: none;
+    }
+
+    .way__box {
+        background-image: url(/assets/images/WayBg.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        .way__in {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 80px;
+            padding: 124px 0 104px;
+
+            .way__in__up {
+                max-width: 848px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .way__title {
+                    font-family: var(--second-family);
+                    font-size: 46px;
+                    line-height: 109%;
+                    text-align: center;
+                    color: var(--zagol);
+                }
+                
+                .way__text {
+                    font-family: var(--third-family);
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 108%;
+                    text-align: center;
+                }
+            }
+
+            .way__items {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 50px;
+                z-index: 20;
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.footer__up {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: calc(100% - 40px);
+  max-width: 1440px;
+  margin: 234px auto 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  .footer__up__bg {
+    width: 100%;
+    position: absolute;
+    top: -230px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    z-index: -30;
+  }
+}
+
+
+.footer {
+    background-color: var(--osnov);
+    padding-bottom: 53px;
+  
+  .footer__box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 70px;
+      margin-top: -230px !important;
+
+      .footer__up {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 170px;
+        padding: 0 31.5px;
+      }
+
+      .footer__map {
+        width: 100%;
+      }
+
+      .footer__bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+
+        .footer__line {
+          width: 100%;
+          border: 3px solid #fff;
+          border-radius: 2px;
+        }
+
+        .footer__protection {
+          font-family: var(--font-family);
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 108%;
+          text-align: center;
+          color: #fff;
+        }
+      }
+   }
+}
+
+
+@media (max-width: 500px) {
+
+    .footer {
+        padding-bottom: 32px;
+    
+        .footer__box {
+            gap: 40px;
+            margin-top: -230px !important;
+    
+            .footer__up {
+                gap: 60px;
+                padding: 0;
+            }
+    
+            .footer__map {
+                width: 100%;
+            }
+      
+            .footer__bottom {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+
+                .footer__line {
+                  border: 2px solid #fff;
+                  border-radius: 2px;
+                }
+      
+                .footer__protection {
+                  font-size: 14px;
+                  line-height: 136%;
+                }
+            }
+        }
+    }
+}

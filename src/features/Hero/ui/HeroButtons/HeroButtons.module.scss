@@ -1,0 +1,13 @@
+.buttons {
+  display: flex;
+  column-gap: 20px;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 500px) {
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+}

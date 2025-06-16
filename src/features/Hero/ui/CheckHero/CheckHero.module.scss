@@ -1,0 +1,68 @@
+.check__items {
+    padding-bottom: 80px;
+
+    .check__ul {
+        padding-left: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+        color: #fff;
+
+        .check__li1 {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 107%;
+            color: #fff;
+            position: relative;
+        }
+
+        .check__li1::after {
+            content: '';
+            position: absolute;
+            background-image: url('/assets/icons/Check.svg');
+            width: 40px;
+            height: 40px;
+            top: -2px;
+            left: -60px;
+        }
+
+        .check__li2 {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 107%;
+            color: #fff;
+            position: relative;
+        }
+
+        .check__li2::after {
+            content: '';
+            position: absolute;
+            background-image: url('/assets/icons/Check.svg');
+            width: 40px;
+            height: 40px;
+            top: -2px;
+            left: -60px;
+        }
+
+        .check__li3 {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 107%;
+            color: #fff;
+            position: relative;
+        }
+
+        .check__li3::after {
+            content: '';
+            position: absolute;
+            background-image: url('/assets/icons/Check.svg');
+            width: 40px;
+            height: 40px;
+            top: 20%;
+            left: -60px;
+        }
+    }
+}

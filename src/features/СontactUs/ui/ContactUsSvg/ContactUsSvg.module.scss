@@ -1,0 +1,41 @@
+.contactUsImages {
+  display: flex;
+  column-gap: 30.32px;
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    transition: fill 0.5s;
+    
+    .svg {
+      fill: var(--333);
+    }
+
+    .svgInner {
+      fill: white;
+      transition: fill 0.5s;
+    }
+
+    &:hover {
+      .svg {
+        fill: white;
+        cursor: pointer;
+      }
+
+      .svgInner {
+        fill: black;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .contactUsImages {
+    column-gap: 9.32px;
+
+    .icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+.formFooter {
+  width: 547px;
+  height: 688px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__formGroup {
+    width: 100%;
+    height: 10%;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    height: 100%;
+    background: #fbf3ec;
+    color: #8f8f8f;
+    font-family: var(--third-family);
+    font-size: 1.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    &:focus {
+      border: 2px solid #4a90e2;
+      outline: none;
+    }
+  }
+
+  input {
+    padding: 15px 20px;
+  }
+
+  .textareaFormGroup {
+    height: 24%;
+  }
+
+  textarea {
+    padding: 23px 23px 15px 23px;
+    resize: none;
+  }
+
+  h3 {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 46px;
+    color: #fff;
+  }
+
+  .PhoneInput {
+    width: 100%;
+    height: 100%;
+    .PhoneInputCountry {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 7px;
+      padding: 10px;
+      width: 18%;
+      height: 100%;
+      background: #fbf3ec;
+    }
+  }
+
+  &__button {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 70%;
+    height: 8.5%;
+    background: var(--333);
+    font-family: var(--font3);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+    z-index: 0;
+    border: none;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+  }
+
+  &__button:hover {
+    border: 3px solid var(--333);
+    background: rgba(210, 50, 22, 0.2);
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .formFooter {
+    padding: 1.6rem 0 0;
+    height: 349px;
+
+    input {
+      font-size: 12px;
+      line-height: 100%;
+      padding: 11px 12px;
+      border-radius: 4px;
+    }
+
+    textarea {
+      font-size: 12px;
+      line-height: 100%;
+      padding: 12.11px;
+      border-radius: 4px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      font-size: 12px;
+      line-height: 100%;
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 111%;
+    }
+    .PhoneInput {
+      .PhoneInputCountry {
+        width: 20%;
+        border-radius: 4px;
+      }
+    }
+
+    &__button {
+      border-radius: 5px;
+      width: 208px;
+      height: 38px;
+      font-size: 16px;
+      line-height: 100%;
+      margin-top: 17px;
+    }
+  }
+}

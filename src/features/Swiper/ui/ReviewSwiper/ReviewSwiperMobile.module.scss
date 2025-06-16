@@ -1,0 +1,63 @@
+@media (max-width: 500px) {
+    .content__slide {
+        background: url(/assets/images/SwiperBgMobile.svg) center / cover no-repeat;
+        gap: 20px;
+    
+        .content__up {
+            padding-bottom: 5px;
+            gap: 10px;
+
+            .content__img {
+                width: 50px;
+                height: 50px
+            }
+    
+            .content__title {
+                font-family: var(--font-family);
+                font-size: 18px;
+                line-height: 111%;
+            }
+        }
+    
+        .content__stars {
+            column-gap: 7px;
+
+            .content__star {
+                width: 26px;
+                height: 24px;
+            }
+        }
+    
+        .content__review {
+            max-width: 884px;
+            .content__text {
+                font-family: var(--second-family);
+                font-size: 14px;
+                line-height: 129%;
+            }
+        }
+    }
+
+    .swiper__pagination {
+        gap: 3px;
+        margin-top: 18px;
+    }
+      
+    .swiper__pagination :global(.swiper-pagination-bullet) {
+        width: 10px;
+        height: 10px;
+    }
+}
+  
+
+@media (max-width: 390px) {
+    .content__slide {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 340px) {
+    .content__slide {
+        padding: 10px 20px;
+    }
+}

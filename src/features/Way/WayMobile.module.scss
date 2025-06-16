@@ -1,0 +1,88 @@
+@media (max-width: 500px) {
+    .way {
+        padding: 30px 0 20px;
+        background-image: url(/assets/images/WayBg.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .way__line1 {
+            display: none;
+        }
+    
+        .way__line2 {
+            display: none;
+        }
+    
+        .way__line6 {
+            position: absolute;
+            top: 15%;
+            min-width: 100vw;
+            height: 28px;
+            max-width: 100%;
+            display: block;
+        }
+    
+        .way__line7 {
+            position: absolute;
+            top: 83%;
+            width: 100vw;
+            height: 28px;
+            max-width: 100%;
+            display: block;
+        }
+
+        .way__line3 {
+            position: absolute;
+            top: 66%;
+            width: 100vw;
+            height: 28px;
+            max-width: 100%;
+            display: block;
+        }
+
+        .way__line4 {
+            position: absolute;
+            top: 49%;
+            width: 100vw;
+            height: 25px;
+            max-width: 100%;
+            display: block;
+        }
+
+        .way__line5 {
+            position: absolute;
+            top: 32%;
+            width: 100vw;
+            height: 28px;
+            max-width: 100%;
+            display: block;
+        }
+    
+        .way__box {
+            background: none;
+    
+            .way__in {
+                gap: 40px;
+                padding-top: 0;
+                padding-bottom: 120px;
+
+                .way__in__up {
+
+                    .way__title {
+                        font-size: 24px;
+                        line-height: 108%;
+                    }
+
+                    .way__text {
+                        display: none;
+                    }
+                }
+    
+                .way__items {
+                    gap: 24px;
+                }
+            }
+        }
+    }
+}

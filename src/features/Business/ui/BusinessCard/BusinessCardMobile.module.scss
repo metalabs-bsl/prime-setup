@@ -1,0 +1,85 @@
+@media (max-width: 500px) {
+    .card {
+        width: 317px;
+        border-left: 3.88px solid var(--osnov);
+        border-right: 3.88px solid var(--osnov);
+        border-radius: 23px;
+        padding: 19px 36px;
+        gap: 19px;
+    
+        &__up {
+            gap: 7.75px;
+    
+            .card__title {
+                font-size: 20px;
+            }
+    
+            .card__price {
+                font-size: 23px;
+            }
+        }
+    
+        &__items {
+            gap: 15px;
+            padding-left: 30px;
+            padding-bottom: 12px;
+    
+            .card__item {
+                font-size: 15px;
+            }
+    
+            .card__item::after {
+                content: '';
+                position: absolute;
+                background-image: url(/assets/icons/BusinessCheckMobile.svg);
+                width: 23px;
+                height: 23px;
+                top: -2px;
+                left: -30px;
+            }
+        }
+
+        .card__btn {
+            margin: 0;
+        }
+    }
+}
+
+
+@media (max-width: 350px) {
+    .card {
+        width: 280px;
+        padding: 14px 20px;
+        gap: 15px;
+    
+        &__up {
+            gap: 6px;
+    
+            .card__title {
+                font-size: 19px;
+            }
+    
+            .card__price {
+                font-size: 21px;
+            }
+        }
+    
+        &__items {
+            padding-bottom: 10px;
+    
+            .card__item {
+                font-size: 14px;
+            }
+    
+            .card__item::after {
+                content: '';
+                position: absolute;
+                background-image: url(/assets/icons/BusinessCheckMobile.svg);
+                width: 23px;
+                height: 23px;
+                top: -2px;
+                left: -30px;
+            }
+        }
+    }
+}
