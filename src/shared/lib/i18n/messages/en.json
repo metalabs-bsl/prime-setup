@@ -6,8 +6,8 @@
   "Hero": {
     "h1": "Setup Your Business in the UAE — Quickly, Confidently, and Compliantly",
     "p": "Launch your company in the UAE without the stress. PrimeSetup helps entrepreneurs, investors, and professionals register their business seamlessly, from choosing the right legal structure to securing their trade licence.",
-    "telegram": "Write in chat",
-    "whatsapp": "Write to WhatsApp",
+    "telegram": "Start in chat",
+    "whatsapp": "Start to WhatsApp",
     "li1First": "1000+",
     "li1Second": "satisfied clients",
     "li2First": "5+ years",
@@ -37,10 +37,10 @@
     "sending": "Sending..."
   },
 
-  "ContactUs":{
+  "ContactUs": {
     "officeAddressMobileUP": "Comprehensive solutions for registering and supporting businesses in the UAE.",
     "officeAddress": "Office Address:",
-    "officeAddressText1": "Prime Setup Business Sheikh Zayed Road, Dubai, UAE",
+    "officeAddressText1": "Office 2407, HDS Tower, Cluster F, Dubai, UAE ",
 
     "workingHours": "Working Hours:",
     "workingHoursText1": "Monday to Friday — 8:30 AM to 5:30 PM Saturday — 10:00 AM to 2:00 PM",
@@ -69,8 +69,8 @@
   },
 
   "Business": {
-    "h2Business": "Начните бизнес в ОАЭ с профессиональной поддержкой",
-    "pBusiness": "Простые и понятные пакеты для быстрого старта. Выбирайте и регистрируйтесь без лишней бюрократии.",
+    "h2Business": "Start Your Business in the UAE with Expert Support",
+    "pBusiness": "Prime Setup offers clear, hassle-free business setup packages tailored to your needs. From choosing the right structure to handling paperwork — we guide you every step of the way. Fast, transparent, and fully compliant.",
     "title1Business": "Dubai Freezone",
     "title2Business": "RAKEZ Free Zone",
     "title3Business": "Dubai Mainland",
@@ -94,7 +94,7 @@
     "check2Business6": "E-channel registration",
     "check2Business7": "FREE digital bank account opening",
     "check2Business8": "Most cost-effective free zone in the UAE",
-    
+
     "check3Business1": "100% foreign ownership",
     "check3Business2": "No local sponsorship required",
     "check3Business3": "No paid-up share capital",
