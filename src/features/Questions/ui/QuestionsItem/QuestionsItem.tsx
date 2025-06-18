@@ -11,11 +11,11 @@ export const QuestionsItem: React.FC<QuestionsItemProps> = ({question, answer}) 
 
     return (
         <div className={`${styles.item} ${mobile.item}`}>
-            <div className={`${styles.item__box} ${mobile.item__box}`}>
+            <div onClick={() => setIsOpen(prev => !prev)} className={`${styles.item__box} ${mobile.item__box}`}>
                 <div className={`${styles.item__left} ${mobile.item__left}`}>
                     <h3 className={`${styles.item__question} ${mobile.item__question}`}>{question}</h3>
                 </div>
-                <div onClick={() => setIsOpen(prev => !prev)} className={`${styles.item__right} ${mobile.item__right}`}>
+                <div className={`${styles.item__right} ${mobile.item__right}`}>
                     <motion.img
                       className={`${styles.item__arrow} ${mobile.item__arrow}`}
                       src='/assets/icons/Arrow.svg'

@@ -6,8 +6,8 @@
   "Hero": {
     "h1": "Setup Your Business in the UAE — Quickly, Confidently, and Compliantly",
     "p": "Launch your company in the UAE without the stress. PrimeSetup helps entrepreneurs, investors, and professionals register their business seamlessly, from choosing the right legal structure to securing their trade licence.",
-    "telegram": "Start in chat",
-    "whatsapp": "Start to WhatsApp",
+    "telegram": "Start on chat",
+    "whatsapp": "Start on WhatsApp",
     "li1First": "1000+",
     "li1Second": "satisfied clients",
     "li2First": "5+ years",
@@ -150,5 +150,9 @@
     "textReview1": "«I had been looking for a company that could help me start a business in the UAE without stress — and I found it! I was guided through every step, all my questions were answered, and I got help with document preparation and registration. Within 5 days, I already had my license. Honestly — this is the best investment I’ve made in my business!»",
     "textReview2": "«I had been looking for a company that could help me start a business in the UAE without stress — and I found it! I was guided through every step, all my questions were answered, and I got help with document preparation and registration. Within 5 days, I already had my license. Honestly — this is the best investment I’ve made in my business!»",
     "textReview3": "«I had been looking for a company that could help me start a business in the UAE without stress — and I found it! I was guided through every step, all my questions were answered, and I got help with document preparation and registration. Within 5 days, I already had my license. Honestly — this is the best investment I’ve made in my business!»"
+  },
+  "Popup": {
+    "success": "Form submitted successfully!",
+    "error": "Failed to submit the form. Please try again later."
   }
 }

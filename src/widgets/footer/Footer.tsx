@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
 
     return (
         <>  
-            <div className={styles.footer__up}>
+            <div className={styles.footer__up} id='footer'>
                 <Image className={styles.footer__up__bg} alt='Footer Background Up' src='/assets/images/FooterBgUp.svg' width={1393} height={427}/>
             </div>
             <footer className={`${styles.footer} ${mobile.footer}`}>

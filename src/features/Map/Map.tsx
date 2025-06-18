@@ -11,7 +11,7 @@ export const Map = () => {
             frameBorder="0"
             style={{ border: 0 }}
             referrerPolicy="no-referrer-when-downgrade"
-            src="https://maps.google.com/maps?width=100%&height=400&hl=en&q=Metalabs%2C%20Bishkek%2C%20Kyrgyzstan&t=&z=18&ie=UTF8&iwloc=B&output=embed"
+            src="https://maps.google.com/maps?width=100%25&height=400&hl=en&q=Prime%20Setup%20Business%2C%20Sheikh%20Zayed%20Road%2C%20Dubai%2C%20UAE&t=&z=18&ie=UTF8&iwloc=B&output=embed"
             loading="lazy"
             title="Google Maps location"
           />

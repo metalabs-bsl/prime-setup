@@ -7,6 +7,7 @@ import { FormHeroProps } from "@/shared/types/types";
 import { useTranslations } from "next-intl";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Country } from "react-phone-number-input";
+import { Toast } from "@/shared/ui/Toast";
 
 const PhoneInput = dynamic(
   () => import("react-phone-number-input").then((mod) => mod.default),
@@ -32,6 +33,8 @@ export const FormHero: React.FC<FormHeroProps> = memo(function FormHero({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const [userCountry, setUserCountry] = useState<string | undefined>();
+  const [showToast, setShowToast] = useState(false);
+  const [toastType, setToastType] = useState<"success" | "error">("error");
 
   useEffect(() => {
     fetch("https://ipapi.co/json/")
@@ -104,8 +107,12 @@ export const FormHero: React.FC<FormHeroProps> = memo(function FormHero({
         setPhone("");
         setMessage("");
         setRecaptchaValue(null);
+        setToastType("success");
+        setShowToast(true);
       } catch (error) {
         console.error("Error:", error);
+        setToastType("error");
+        setShowToast(true);
       } finally {
         setIsSubmitting(false);
       }
@@ -114,69 +121,77 @@ export const FormHero: React.FC<FormHeroProps> = memo(function FormHero({
   );
 
   return (
-    <form
-      id="heroForm"
-      className={`formHero ${className}`}
-      onSubmit={handleSubmit}
-    >
-      <p className="formHero__description">{pText}</p>
+    <>
+      <Toast
+        visible={showToast}
+        type={toastType}
+        onClose={() => setShowToast(false)}
+      />
 
-      <div className="formHero__formGroup">
-        <input
-          type="text"
-          id="name"
-          placeholder={t("name")}
-          value={name}
-          onChange={handleNameChange}
-          required
-        />
-      </div>
-
-      <div className="formHero__formGroup">
-        <input
-          type="email"
-          id="email"
-          placeholder={t("email")}
-          value={email}
-          onChange={handleEmailChange}
-          required
-        />
-      </div>
-
-      <div className="formHero__formGroup">
-        <PhoneInput
-          international
-          defaultCountry={userCountry as Country}
-          value={phone}
-          onChange={handlePhoneChange}
-          placeholder={t("number")}
-        />
-      </div>
-
-      <div className="formHero__formGroup textareaFormGroup">
-        <textarea
-          id="message"
-          value={message}
-          placeholder={t("message")}
-          onChange={handleMessageChange}
-          rows={4}
-        />
-      </div>
-
-      <div className="formHero__formGroup">
-        <ReCAPTCHA
-          sitekey="6LfBPFsrAAAAAGQJlcm5RJgvkJxAIJYSgVxNYvCd"
-          onChange={handleRecaptchaChange}
-        />
-      </div>
-
-      <button
-        type="submit"
-        className="formHero__button"
-        disabled={isSubmitting || !recaptchaValue}
+      <form
+        id="heroForm"
+        className={`formHero ${className}`}
+        onSubmit={handleSubmit}
       >
-        {isSubmitting ? t("sending") : t("send")}
-      </button>
-    </form>
+        <p className="formHero__description">{pText}</p>
+
+        <div className="formHero__formGroup">
+          <input
+            type="text"
+            id="name"
+            placeholder={t("name")}
+            value={name}
+            onChange={handleNameChange}
+            required
+          />
+        </div>
+
+        <div className="formHero__formGroup">
+          <input
+            type="email"
+            id="email"
+            placeholder={t("email")}
+            value={email}
+            onChange={handleEmailChange}
+            required
+          />
+        </div>
+
+        <div className="formHero__formGroup">
+          <PhoneInput
+            international
+            defaultCountry={userCountry as Country}
+            value={phone}
+            onChange={handlePhoneChange}
+            placeholder={t("number")}
+          />
+        </div>
+
+        <div className="formHero__formGroup textareaFormGroup">
+          <textarea
+            id="message"
+            value={message}
+            placeholder={t("message")}
+            onChange={handleMessageChange}
+            rows={4}
+          />
+        </div>
+
+        <div className="formHero__formGroup">
+          <ReCAPTCHA
+            sitekey="6LfBPFsrAAAAAGQJlcm5RJgvkJxAIJYSgVxNYvCd"
+            onChange={handleRecaptchaChange}
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="formHero__button"
+          disabled={isSubmitting || !recaptchaValue}
+        >
+          {isSubmitting ? t("sending") : t("send")}
+        </button>
+      </form>
+    </>
   );
 });
