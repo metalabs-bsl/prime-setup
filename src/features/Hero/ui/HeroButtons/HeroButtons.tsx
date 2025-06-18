@@ -9,7 +9,7 @@ export const HeroButtons = ({
 }: HeroButtonsProps) => {
   const phone = "971521672443"; 
   const whatsappLink = `https://wa.me/${phone}`;
-  const telegramLink = `https://t.me/${phone}`; 
+  const telegramLink = `https://t.me/Primesetup`; 
 
   return (
     <div className={styles.buttons}>

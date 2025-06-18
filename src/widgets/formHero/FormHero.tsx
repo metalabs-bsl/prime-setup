@@ -1,17 +1,18 @@
 "use client";
-import { useState, useCallback, memo } from "react";
+import { useState, useCallback, memo, useEffect } from "react";
 import dynamic from "next/dynamic";
 import "react-phone-number-input/style.css";
 import "./FormHero.scss";
 import { FormHeroProps } from "@/shared/types/types";
 import { useTranslations } from "next-intl";
 import ReCAPTCHA from "react-google-recaptcha";
+import { Country } from "react-phone-number-input";
 
 const PhoneInput = dynamic(
   () => import("react-phone-number-input").then((mod) => mod.default),
   {
     ssr: false,
-    loading: () => <input type="tel" placeholder="Loading phone input..." />,
+    loading: () => <input type="glob" placeholder="Loading phone input..." />,
   }
 );
 
@@ -30,6 +31,18 @@ export const FormHero: React.FC<FormHeroProps> = memo(function FormHero({
   const [message, setMessage] = useState(initialMessage);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
+  const [userCountry, setUserCountry] = useState<string | undefined>();
+
+  useEffect(() => {
+    fetch("https://ipapi.co/json/")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.country_code) {
+          setUserCountry(data.country_code); // типа "KG"
+        }
+      })
+      .catch((err) => console.error("GeoIP error", err));
+  }, []);
 
   const handleNameChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -63,7 +76,7 @@ export const FormHero: React.FC<FormHeroProps> = memo(function FormHero({
   const handleSubmit = useCallback(
     async (e: React.FormEvent) => {
       e.preventDefault();
-      
+
       if (!recaptchaValue) {
         alert(t("recaptchaError"));
         return;
@@ -85,7 +98,7 @@ export const FormHero: React.FC<FormHeroProps> = memo(function FormHero({
             recaptcha: recaptchaValue,
           }),
         });
-        
+
         setName("");
         setEmail("");
         setPhone("");
@@ -101,7 +114,11 @@ export const FormHero: React.FC<FormHeroProps> = memo(function FormHero({
   );
 
   return (
-    <form id='heroForm' className={`formHero ${className}`} onSubmit={handleSubmit}>
+    <form
+      id="heroForm"
+      className={`formHero ${className}`}
+      onSubmit={handleSubmit}
+    >
       <p className="formHero__description">{pText}</p>
 
       <div className="formHero__formGroup">
@@ -129,6 +146,7 @@ export const FormHero: React.FC<FormHeroProps> = memo(function FormHero({
       <div className="formHero__formGroup">
         <PhoneInput
           international
+          defaultCountry={userCountry as Country}
           value={phone}
           onChange={handlePhoneChange}
           placeholder={t("number")}

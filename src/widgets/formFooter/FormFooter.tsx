@@ -1,11 +1,12 @@
 "use client";
-import { useState, useCallback, memo } from "react";
+import { useState, useCallback, memo, useEffect } from "react";
 import dynamic from "next/dynamic";
 import "react-phone-number-input/style.css";
 import "./FormFooter.scss";
 import { FormHeroProps } from "@/shared/types/types";
 import { useTranslations } from "next-intl";
 import ReCAPTCHA from "react-google-recaptcha";
+import { Country } from "react-phone-number-input";
 
 const PhoneInput = dynamic(
   () => import("react-phone-number-input").then((mod) => mod.default),
@@ -30,6 +31,18 @@ export const FormFooter: React.FC<FormHeroProps> = memo(function FormFooter({
   const [message, setMessage] = useState(initialMessage);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
+  const [userCountry, setUserCountry] = useState<string | undefined>();
+
+  useEffect(() => {
+    fetch("https://ipapi.co/json/")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.country_code) {
+          setUserCountry(data.country_code); // типа "KG"
+        }
+      })
+      .catch((err) => console.error("GeoIP error", err));
+  }, []);
 
   const handleNameChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -63,7 +76,7 @@ export const FormFooter: React.FC<FormHeroProps> = memo(function FormFooter({
   const handleSubmit = useCallback(
     async (e: React.FormEvent) => {
       e.preventDefault();
-      
+
       if (!recaptchaValue) {
         alert(t("recaptchaError"));
         return;
@@ -85,7 +98,7 @@ export const FormFooter: React.FC<FormHeroProps> = memo(function FormFooter({
             recaptcha: recaptchaValue,
           }),
         });
-        
+
         setName("");
         setEmail("");
         setPhone("");
@@ -129,6 +142,7 @@ export const FormFooter: React.FC<FormHeroProps> = memo(function FormFooter({
       <div className="formFooter__formGroup">
         <PhoneInput
           international
+          defaultCountry={userCountry as Country}
           value={phone}
           onChange={handlePhoneChange}
           placeholder={t("number")}
@@ -147,7 +161,7 @@ export const FormFooter: React.FC<FormHeroProps> = memo(function FormFooter({
 
       <div className="formFooter__formGroup">
         <ReCAPTCHA
-          sitekey="6LfBPFsrAAAAAGQJlcm5RJgvkJxAIJYSgVxNYvCd" 
+          sitekey="6LfBPFsrAAAAAGQJlcm5RJgvkJxAIJYSgVxNYvCd"
           onChange={handleRecaptchaChange}
         />
       </div>
