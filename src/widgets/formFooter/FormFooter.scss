@@ -88,7 +88,8 @@
 @media screen and (max-width: 500px) {
   .formFooter {
     padding: 1.6rem 0 0;
-    height: 349px;
+    height: auto;
+    gap: 6px;
 
     input {
       font-size: 12px;

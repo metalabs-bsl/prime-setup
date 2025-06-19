@@ -9,6 +9,9 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { Country } from "react-phone-number-input";
 import { Toast } from "@/shared/ui/Toast";
 
+
+
+
 const PhoneInput = dynamic(
   () => import("react-phone-number-input").then((mod) => mod.default),
   {
@@ -41,7 +44,7 @@ export const FormFooter: React.FC<FormHeroProps> = memo(function FormFooter({
       .then((res) => res.json())
       .then((data) => {
         if (data?.country_code) {
-          setUserCountry(data.country_code); // типа "KG"
+          setUserCountry(data.country_code); 
         }
       })
       .catch((err) => console.error("GeoIP error", err));
@@ -79,7 +82,7 @@ export const FormFooter: React.FC<FormHeroProps> = memo(function FormFooter({
   const handleSubmit = useCallback(
     async (e: React.FormEvent) => {
       e.preventDefault();
-
+      
       if (!recaptchaValue) {
         alert(t("recaptchaError"));
         return;
@@ -101,7 +104,7 @@ export const FormFooter: React.FC<FormHeroProps> = memo(function FormFooter({
             recaptcha: recaptchaValue,
           }),
         });
-
+        
         setName("");
         setEmail("");
         setPhone("");
@@ -127,66 +130,66 @@ export const FormFooter: React.FC<FormHeroProps> = memo(function FormFooter({
         type={toastType}
         onClose={() => setShowToast(false)}
       />
-      <form className={`formFooter ${className}`} onSubmit={handleSubmit}>
-        <h3 className="formFooter__description">{pText}</h3>
+    <form className={`formFooter ${className}`} onSubmit={handleSubmit}>
+      <h3 className="formFooter__description">{pText}</h3>
 
-        <div className="formFooter__formGroup">
-          <input
-            type="text"
-            id="name"
-            placeholder={t("name")}
-            value={name}
-            onChange={handleNameChange}
-            required
-          />
-        </div>
+      <div className="formFooter__formGroup">
+        <input
+          type="text"
+          id="name"
+          placeholder={t("name")}
+          value={name}
+          onChange={handleNameChange}
+          required
+        />
+      </div>
 
-        <div className="formFooter__formGroup">
-          <input
-            type="email"
-            id="email"
-            placeholder={t("email")}
-            value={email}
-            onChange={handleEmailChange}
-            required
-          />
-        </div>
+      <div className="formFooter__formGroup">
+        <input
+          type="email"
+          id="email"
+          placeholder={t("email")}
+          value={email}
+          onChange={handleEmailChange}
+          required
+        />
+      </div>
 
-        <div className="formFooter__formGroup">
-          <PhoneInput
-            international
-            defaultCountry={userCountry as Country}
-            value={phone}
-            onChange={handlePhoneChange}
-            placeholder={t("number")}
-          />
-        </div>
+      <div className="formFooter__formGroup">
+        <PhoneInput
+          international
+          defaultCountry={userCountry as Country}
+          value={phone}
+          onChange={handlePhoneChange}
+          placeholder={t("number")}
+        />
+      </div>
 
-        <div className="formFooter__formGroup textareaFormGroup">
-          <textarea
-            id="message"
-            value={message}
-            placeholder={t("message")}
-            onChange={handleMessageChange}
-            rows={4}
-          />
-        </div>
+      <div className="formFooter__formGroup textareaFormGroup">
+        <textarea
+          id="message"
+          value={message}
+          placeholder={t("message")}
+          onChange={handleMessageChange}
+          rows={4}
+        />
+      </div>
 
-        <div className="formFooter__formGroup">
-          <ReCAPTCHA
-            sitekey="6LfBPFsrAAAAAGQJlcm5RJgvkJxAIJYSgVxNYvCd"
-            onChange={handleRecaptchaChange}
-          />
-        </div>
+      <div className="formFooter__formGroup">
+        <ReCAPTCHA
+          sitekey="6LfP8GQrAAAAAPzMUVbjxGiJJFXv9B8aHwfnVzCD" 
+          onChange={handleRecaptchaChange}
+        />
+      </div>
 
-        <button
-          type="submit"
-          className="formFooter__button"
-          disabled={isSubmitting || !recaptchaValue}
-        >
-          {isSubmitting ? t("sending") : t("send")}
-        </button>
-      </form>
-    </>
+      <button
+        type="submit"
+        className="formFooter__button"
+        disabled={isSubmitting || !recaptchaValue}
+      >
+        {isSubmitting ? t("sending") : t("send")}
+      </button>
+    </form>
+   </>
   );
 });

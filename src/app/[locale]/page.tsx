@@ -3,7 +3,6 @@ import { Questions } from "@/features/Questions/Questions";
 import { Business } from "@/features/Business/Business";
 import { Hero } from "@/features/Hero/Hero";
 import { Way } from "@/features/Way/Way";
-import { Review } from "@/features/Swiper/Review";
 
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
         <Way/>
         <Business/>
         <Questions/>
-        <Review/>
     </main>
   );
 }

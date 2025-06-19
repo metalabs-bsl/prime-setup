@@ -6,7 +6,6 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Language } from "../language/Language";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 
 export const Header: React.FC = () => {
   const navigation = useRouter();
@@ -28,9 +27,9 @@ export const Header: React.FC = () => {
           <div className={`${styles.header__right} ${mobile.header__right}`}>
             <Language />
             <div className={`${styles.header__btn} ${mobile.header__btn}`}>
-              <a href="tel:+996507695369">
+              <a href="tel:+971 52 167 2443">
                 <Button
-                  text={"+996507695369"}
+                  text={"+971 52 167 2443"}
                   variant="number"
                   size="requestSize"
                 />
